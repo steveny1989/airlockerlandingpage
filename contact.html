@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>联系销售 | AirLocker</title>
+  <meta name="description" content="联系 AirLocker 销售团队，获取企业版方案与定制服务。Contact sales for enterprise and custom solutions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>window.DOWNLOAD_URL = window.DOWNLOAD_URL || '#';</script>
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">AirLocker</a>
+    <div class="nav-links">
+      <a href="index.html#features" data-zh>产品功能</a>
+      <a href="index.html#features" data-en class="hidden">Features</a>
+      <a href="index.html#security" data-zh>安全</a>
+      <a href="index.html#security" data-en class="hidden">Security</a>
+      <a href="index.html#industries" data-zh>适用场景</a>
+      <a href="index.html#industries" data-en class="hidden">Use cases</a>
+      <a href="contact.html" data-zh>联系销售</a>
+      <a href="contact.html" data-en class="hidden">Contact sales</a>
+    </div>
+    <div class="nav-cta">
+      <div class="lang-toggle">
+        <button type="button" id="btn-lang-zh" class="active">中文</button>
+        <button type="button" id="btn-lang-en">English</button>
+      </div>
+      <a href="#" class="btn-primary download-link" data-zh>下载</a>
+      <a href="#" class="btn-primary download-link hidden" data-en>Download</a>
+    </div>
+  </nav>
+
+  <header class="hero contact-hero">
+    <h1 data-zh>联系销售</h1>
+    <h1 data-en class="hidden">Contact sales</h1>
+    <p class="hero-sub" data-zh>填写下方表单，我们的团队将尽快与您联系，为您介绍企业版方案与定制服务。</p>
+    <p class="hero-sub hidden" data-en>Fill out the form below and our team will get back to you soon with enterprise and custom solution options.</p>
+  </header>
+
+  <main class="section contact-section">
+    <div class="contact-form-wrap">
+      <form class="contact-form" action="#" method="post" id="contact-form">
+        <!-- 部署时可改为实际接口或 mailto: -->
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="name"><span data-zh>姓名</span><span data-en class="hidden">Full name</span></label>
+            <input type="text" id="name" name="name" class="form-input" required placeholder="" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="company"><span data-zh>公司 / 组织</span><span data-en class="hidden">Company / Organization</span></label>
+            <input type="text" id="company" name="company" class="form-input" required placeholder="" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="email"><span data-zh>工作邮箱</span><span data-en class="hidden">Work email</span></label>
+            <input type="email" id="email" name="email" class="form-input" required placeholder="" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="phone"><span data-zh>电话 <span class="form-optional">（选填）</span></span><span data-en class="hidden">Phone <span class="form-optional">(optional)</span></span></label>
+            <input type="tel" id="phone" name="phone" class="form-input" placeholder="" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="message"><span data-zh>需求或留言</span><span data-en class="hidden">What do you need help with?</span></label>
+          <textarea id="message" name="message" class="form-input form-textarea" rows="5" placeholder=""></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn-submit" data-zh>提交</button>
+          <button type="submit" class="btn-submit hidden" data-en>Submit</button>
+        </div>
+      </form>
+    </div>
+    <p class="contact-note" data-zh>我们通常会在 1–2 个工作日内回复。如有紧急需求，请注明。</p>
+    <p class="contact-note hidden" data-en>We typically respond within 1–2 business days. Please note if your request is urgent.</p>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4 data-zh>产品</h4>
+          <h4 data-en class="hidden">Product</h4>
+          <a href="index.html#features" data-zh>功能</a>
+          <a href="index.html#features" data-en class="hidden">Features</a>
+          <a href="index.html#security" data-zh>安全</a>
+          <a href="index.html#security" data-en class="hidden">Security</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-zh>场景</h4>
+          <h4 data-en class="hidden">Use cases</h4>
+          <a href="index.html#industries" data-zh>适用场景</a>
+          <a href="index.html#industries" data-en class="hidden">Use cases</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-zh>联系</h4>
+          <h4 data-en class="hidden">Contact</h4>
+          <a href="contact.html" data-zh>联系销售</a>
+          <a href="contact.html" data-en class="hidden">Contact sales</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-zh>技术</h4>
+          <h4 data-en class="hidden">Technology</h4>
+          <span data-zh>Microsoft Presidio · RapidOCR</span>
+          <span data-en class="hidden">Microsoft Presidio · RapidOCR</span>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-zh>敏感信息文档处理 · AirLocker</p>
+        <p data-en class="hidden">Sensitive Document Processing · AirLocker</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      // 当前为前端占位，部署时可在此发起 AJAX 或改为 form action 指向后端/第三方表单服务
+      var btn = this.querySelector('.btn-submit:not(.hidden)');
+      if (btn) {
+        var orig = btn.textContent;
+        btn.textContent = document.documentElement.lang === 'zh-CN' ? '已提交' : 'Submitted';
+        btn.disabled = true;
+        setTimeout(function () { btn.textContent = orig; btn.disabled = false; }, 2000);
+      }
+    });
+  </script>
+</body>
+</html>
+

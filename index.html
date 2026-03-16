@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AirLocker | 在交给 AI 之前，先准备好你的文件</title>
+  <meta name="description" content="含敏感信息的文档：多格式提取、智能匿名化、纯本地运行。Prepare your files before you trust them to AI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- 部署时可将下方 DOWNLOAD_URL 改为实际下载地址（安装包或下载页） -->
+  <script>window.DOWNLOAD_URL = window.DOWNLOAD_URL || '#';</script>
+</head>
+<body>
+  <nav class="nav">
+    <a href="#" class="nav-logo">AirLocker</a>
+    <div class="nav-links">
+      <a href="#features" data-zh>产品功能</a>
+      <a href="#features" data-en class="hidden">Features</a>
+      <a href="#industries" data-zh>适用场景</a>
+      <a href="#industries" data-en class="hidden">Use cases</a>
+      <a href="#security" data-zh>安全</a>
+      <a href="#security" data-en class="hidden">Security</a>
+      <a href="contact.html" data-zh>联系销售</a>
+      <a href="contact.html" data-en class="hidden">Contact sales</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#" class="btn-primary download-link" data-zh>下载</a>
+      <a href="#" class="btn-primary download-link hidden" data-en>Download</a>
+    </div>
+  </nav>
+
+  <header class="hero hero-split">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <h1 data-zh>文件里有保密信息，<br />不能直接给 AI。</h1>
+        <h1 data-en class="hidden">Sensitive documents shouldn’t go straight to AI</h1>
+        <p class="hero-sub" data-zh>AirLocker 在本地解析并智能脱敏多种文档，只把无敏感信息的文本交给大模型，安全边界牢牢锁在你自己的电脑里。</p>
+        <p class="hero-sub hidden" data-en>AirLocker first processes your files locally with multi-format extraction and smart anonymization—PDF, Word, images, TXT—so you get a clean TXT output that’s safe and ready for ChatGPT, Gemini, and other AI tools.</p>
+        <div class="hero-cta">
+          <a href="#" class="btn-hero btn-hero-primary download-link" data-zh>下载</a>
+          <a href="#" class="btn-hero btn-hero-primary download-link hidden" data-en>Download</a>
+          <a href="#features" class="btn-hero btn-hero-secondary" data-zh>了解功能</a>
+          <a href="#features" class="btn-hero btn-hero-secondary hidden" data-en>See what’s new</a>
+        </div>
+      </div>
+      <div class="hero-right" aria-hidden="true">
+        <div class="hero-visual">
+          <div class="hero-visual-step hero-visual-step-1">
+            <span class="hero-visual-icon">📄</span>
+            <span class="hero-visual-label" data-zh>文档</span>
+            <span class="hero-visual-label hidden" data-en>Docs</span>
+            <span class="hero-visual-sub" data-zh>PDF · Word · 图片 · TXT</span>
+            <span class="hero-visual-sub hidden" data-en>PDF · Word · Images · TXT</span>
+          </div>
+          <span class="hero-visual-arrow">→</span>
+          <div class="hero-visual-step hero-visual-step-2">
+            <span class="hero-visual-icon">🔒</span>
+            <span class="hero-visual-label" data-zh>脱敏</span>
+            <span class="hero-visual-label hidden" data-en>Anonymize</span>
+          </div>
+          <span class="hero-visual-arrow">→</span>
+          <div class="hero-visual-step hero-visual-step-3">
+            <span class="hero-visual-icon">📝</span>
+            <span class="hero-visual-label" data-zh>TXT</span>
+            <span class="hero-visual-label hidden" data-en>TXT</span>
+          </div>
+          <span class="hero-visual-arrow">→</span>
+          <div class="hero-visual-step hero-visual-step-4">
+            <span class="hero-visual-icon">✨</span>
+            <span class="hero-visual-label" data-zh>大模型</span>
+            <span class="hero-visual-label hidden" data-en>LLMs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="trust-section">
+    <h2 class="section-title" data-zh>在交给 AI 之前，先交给它</h2>
+    <h2 class="section-title hidden" data-en>Before you trust AI, trust this gateway</h2>
+    <p class="section-desc" data-zh>
+      AirLocker 专门为含个人隐私、合规要求和机密条款的文档设计：在你的电脑本地完成解析与脱敏，只把不含敏感信息的文本交给任意大模型。
+    </p>
+    <p class="section-desc hidden" data-en>
+      Purpose-built for documents with private, regulated, or confidential content: everything is parsed and anonymized locally on your machine, and only non-sensitive text is passed on to any AI model.
+    </p>
+    <div class="logos">
+      <span data-zh>给 AI 能看到的越少，你越安心</span>
+      <span data-en class="hidden">The less your AI sees, the safer you feel.</span>
+    </div>
+  </section>
+
+  <section class="section features" id="features">
+    <h2 class="section-title" data-zh>核心能力</h2>
+    <h2 class="section-title hidden" data-en>What it does for you</h2>
+    <p class="section-desc" data-zh>从多格式文档提取，到实体识别与匿名化，一条流水线跑完；批量、可逆还原和报告一次搞定。</p>
+    <p class="section-desc hidden" data-en>From multi-format extraction to entity recognition and anonymization—one pipeline that handles batch runs, reversible mapping, and reports in one go.</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3 data-zh>多格式，一次性处理完</h3>
+        <h3 data-en class="hidden">Multi-format in one pass</h3>
+        <p data-zh>PDF、Word、TXT、图片一次拖进去，自动 OCR、编码检测和批量处理，统一吐出干净文本。</p>
+        <p data-en class="hidden">Drop in PDF, Word, TXT, and images in one go—auto OCR, encoding detection, and batch processing to output clean text.</p>
+      </div>
+      <div class="feature-card">
+        <h3 data-zh>把该遮住的都遮住</h3>
+        <h3 data-en class="hidden">Hide what needs hiding</h3>
+        <p data-zh>人名、机构、地址、身份证、手机、银行账号、合同号等十多类敏感实体自动识别，支持角色称谓和简称等上下文判断，尽量少误杀、不漏掉。</p>
+        <p data-en class="hidden">Automatically detects a dozen-plus sensitive entity types—names, orgs, addresses, IDs, phones, bank and contract numbers—with context-aware handling of roles and abbreviations to avoid both misses and over-masking.</p>
+      </div>
+      <div class="feature-card">
+        <h3 data-zh>可逆映射，必要时能还原</h3>
+        <h3 data-en class="hidden">Reversible mapping when you need it back</h3>
+        <p data-zh>自动生成映射表，内部需要时可还原原文；可选金额模糊化，并输出实体统计和处理摘要，方便审计与复盘。</p>
+        <p data-en class="hidden">Automatically generates mapping tables so you can restore originals internally when needed, with optional amount fuzzing plus entity statistics and summaries for audit and review.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section industries-section" id="industries">
+    <h2 class="section-title" data-zh>适用场景</h2>
+    <h2 class="section-title hidden" data-en>Use cases</h2>
+    <p class="section-desc" data-zh>凡是手里有含真实人名、机构、账号、联系方式等敏感信息的文档，又希望交给 AI 或外部系统处理但不暴露原文的场景，AirLocker 都能用得上。</p>
+    <p class="section-desc hidden" data-en">Whenever you work with documents containing real people, organizations, account or contact data and want to use them with AI or external systems without exposing the originals, AirLocker is a fit.</p>
+    <div class="industries-grid">
+      <div class="industry-card">
+        <h3 data-zh>合同与协议</h3>
+        <h3 data-en class="hidden">Contracts & agreements</h3>
+        <p data-zh>合同、协议、备忘录等文档的批量脱敏，支持条款比对、内部检索和对外共享，而不暴露当事人信息。</p>
+        <p data-en class="hidden">Batch anonymization of contracts, agreements, and memos for clause comparison, internal search, and external sharing without exposing parties.</p>
+      </div>
+      <div class="industry-card">
+        <h3 data-zh>机构与案卷</h3>
+        <h3 data-en class="hidden">Institutions & case files</h3>
+        <p data-zh>申请书、裁决书、报告、案卷等批量处理，在建设案例库和归档时保护当事人和机构身份。</p>
+        <p data-en class="hidden">Batch processing of applications, decisions, reports, and case files to build archives and case libraries while protecting parties and institutions.</p>
+      </div>
+      <div class="industry-card">
+        <h3 data-zh>客户沟通与客服记录</h3>
+        <h3 data-en class="hidden">Customer communication & support logs</h3>
+        <p data-zh>邮件往来、工单、聊天记录等沟通内容，在交给大模型总结、分类或质检前先完成本地脱敏。</p>
+        <p data-en class="hidden">Anonymize emails, tickets, and chat logs locally before sending them to LLMs for summarization, classification, or QA.</p>
+      </div>
+      <div class="industry-card">
+        <h3 data-zh>研究、调研与数据分析</h3>
+        <h3 data-en class="hidden">Research, surveys & data analysis</h3>
+        <p data-zh>问卷、访谈记录、用户反馈等文本数据，在统计、建模或交给 AI 分析前先去标识化，保护参与者隐私。</p>
+        <p data-en class="hidden">Anonymize survey responses, interview transcripts, and user feedback before statistics, modeling, or AI-based analysis to protect participant privacy.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="security-section" id="security">
+    <h2 class="section-title" data-zh>安全从不妥协</h2>
+    <h2 class="section-title hidden" data-en>Security never comes second</h2>
+    <p class="section-desc" data-zh>AirLocker 不把任何原始文档发出你的电脑：不上传云端、不调用外部识别 API，一切解析、识别、脱敏都在本地完成，满足保密、合规和审计的要求。</p>
+    <p class="section-desc hidden" data-en>AirLocker never sends raw documents off your machine: no cloud uploads, no external recognition APIs—parsing, detection, and anonymization all run locally to meet confidentiality, compliance, and audit needs.</p>
+    <div class="security-grid">
+      <div class="security-item">
+        <strong data-zh>纯本地处理</strong>
+        <strong data-en class="hidden">On-device only</strong>
+        <span data-zh>所有文档解析、识别和脱敏都在你的设备上完成，不经过任何外部服务器。</span>
+        <span data-en class="hidden">All parsing, detection, and anonymization run on your machine—never on external servers.</span>
+      </div>
+      <div class="security-item">
+        <strong data-zh>无外部依赖</strong>
+        <strong data-en class="hidden">No external APIs</strong>
+        <span data-zh>不依赖第三方识别服务，无额外数据流出路径，减少供应链风险。</span>
+        <span data-en class="hidden">No third-party recognition services or extra data egress paths, reducing supply-chain risk.</span>
+      </div>
+      <div class="security-item">
+        <strong data-zh>可审计可还原</strong>
+        <strong data-en class="hidden">Auditable and reversible</strong>
+        <span data-zh>生成受控的映射表，只在内部需要时还原原文，支持事后审计和责任追踪。</span>
+        <span data-en class="hidden">Controlled mapping tables let you restore originals internally when needed, with full traceability for audits.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2 data-zh>准备好更安全地处理文档了吗？</h2>
+    <h2 data-en class="hidden">Ready to process documents more securely?</h2>
+    <p data-zh>纯本地运行，从多格式提取到智能匿名化，一步到位。</p>
+    <p data-en class="hidden">Fully local—from multi-format extraction to smart anonymization in one step.</p>
+    <a href="#" class="btn-primary download-link" data-zh>下载</a>
+    <a href="#" class="btn-primary download-link hidden" data-en>Download</a>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4 data-zh>产品</h4>
+          <h4 data-en class="hidden">Product</h4>
+          <a href="#features" data-zh>功能</a>
+          <a href="#features" data-en class="hidden">Features</a>
+          <a href="#security" data-zh>安全</a>
+          <a href="#security" data-en class="hidden">Security</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-zh>场景</h4>
+          <h4 data-en class="hidden">Use cases</h4>
+          <a href="#industries" data-zh>适用场景</a>
+          <a href="#industries" data-en class="hidden">Use cases</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-zh>联系</h4>
+          <h4 data-en class="hidden">Contact</h4>
+          <a href="contact.html" data-zh>联系销售</a>
+          <a href="contact.html" data-en class="hidden">Contact sales</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-zh>技术</h4>
+          <h4 data-en class="hidden">Technology</h4>
+          <span data-zh>本地运行 · 多引擎识别</span>
+          <span data-en class="hidden">On-device · Multi-engine OCR & NLP</span>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-zh>敏感信息文档处理 · AirLocker</p>
+        <p data-en class="hidden">Sensitive Document Processing · AirLocker</p>
+        <div class="footer-lang">
+          <div class="lang-dropdown">
+            <button type="button" id="footer-lang-toggle" class="lang-dropdown-toggle">
+              Language
+            </button>
+            <div class="lang-dropdown-menu" id="footer-lang-menu">
+              <button type="button" id="btn-lang-zh-footer" class="active">中文</button>
+              <button type="button" id="btn-lang-en-footer">English</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+
