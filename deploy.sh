@@ -22,5 +22,10 @@ fi
 git add .
 git commit -m "$MSG" || echo "Nothing to commit."
 git branch -M main
+echo "Pulling latest changes from remote..."
+git pull --rebase origin main || {
+  echo "⚠️ git pull --rebase 失败，请手动处理冲突后再运行本脚本。"
+  exit 1
+}
 git push -u origin main
 echo "✅ Deployed to GitHub."
