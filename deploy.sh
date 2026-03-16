@@ -13,8 +13,12 @@ cd /Users/diyao/Arbitrator/airlocker-landing
 git remote set-url origin https://github.com/steveny1989/airlockerlandingpage.git
 # 查看状态
 git status
-# 询问一次避免误操作（想直接干掉这段也行）
-read -p "Commit and push with message: \"$MSG\" ? [y/N] " CONFIRM
+# 询问一次避免误操作（非交互环境下自动继续）
+CONFIRM="y"
+if [ -t 0 ]; then
+  CONFIRM="n"
+  read -p "Commit and push with message: \"$MSG\" ? [y/N] " CONFIRM || true
+fi
 if [[ "$CONFIRM" != "y" && "$CONFIRM" != "Y" ]]; then
   echo "Canceled."
   exit 0
