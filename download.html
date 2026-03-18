@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AirLocker 下载</title>
+    <meta name="description" content="Download AirLocker" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .download-hero {
+        padding-top: 6.25rem;
+        padding-bottom: 2.5rem;
+      }
+
+      .download-wrap {
+        max-width: 72rem;
+        margin: 0 auto;
+        padding: 0 1rem 4rem;
+      }
+
+      .download-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .download-title {
+        font-size: clamp(1.8rem, 3vw, 2.2rem);
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        color: var(--text);
+      }
+
+      .download-sub {
+        margin-top: 0.65rem;
+        color: var(--text-muted);
+        line-height: 1.6;
+        max-width: 46rem;
+        font-size: 1.05rem;
+      }
+
+      .download-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+        margin-top: 1.5rem;
+      }
+
+      .dl-card {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 1.6rem;
+        box-shadow: var(--shadow);
+        transition: box-shadow 0.2s, border-color 0.2s;
+        display: flex;
+        flex-direction: column;
+        min-height: 240px;
+      }
+
+      .dl-card:hover {
+        border-color: var(--accent-light);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .dl-card-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem;
+        margin-bottom: 0.65rem;
+      }
+
+      .dl-card h3 {
+        margin: 0;
+        font-size: 1.15rem;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        color: var(--text);
+        flex: 1;
+      }
+
+      .dl-badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.25rem 0.55rem;
+        border-radius: 999px;
+        font-size: 0.78rem;
+        font-weight: 600;
+        border: 1px solid var(--border);
+        background: var(--bg-subtle);
+        color: var(--text-muted);
+        white-space: nowrap;
+      }
+
+      .dl-badge-recommended {
+        background: var(--accent-light);
+        border-color: rgba(0, 97, 255, 0.18);
+        color: var(--accent);
+      }
+
+      .dl-card p {
+        margin: 0 0 1.1rem;
+        color: var(--text-muted);
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+
+      .dl-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        align-items: center;
+        margin-top: auto;
+        justify-content: center;
+      }
+
+      .dl-meta {
+        margin-top: 0.9rem;
+        color: var(--text-muted);
+        font-size: 0.92rem;
+      }
+
+      .dl-note {
+        margin-top: 1.25rem;
+        color: var(--text-muted);
+        font-size: 0.98rem;
+        line-height: 1.65;
+      }
+
+      .dl-code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        font-size: 0.9em;
+        padding: 2px 6px;
+        border-radius: 8px;
+        background: var(--bg-subtle);
+        border: 1px solid var(--border);
+      }
+
+      @media (max-width: 860px) {
+        .download-grid { grid-template-columns: 1fr; }
+        .download-header { flex-direction: column; align-items: flex-start; }
+      }
+    </style>
+    <script>
+      // Release download links.
+      // Recommended: set up an R2 Custom Domain like https://download.airlockerai.com
+      // and keep a stable "latest" object name (e.g. Airlok_Gateway_Setup-latest.dmg).
+      //
+      // You can override these at deploy time by injecting window.DOWNLOADS or
+      // window.DOWNLOAD_BASE_URL before this script runs.
+      window.DOWNLOAD_BASE_URL = window.DOWNLOAD_BASE_URL || 'https://download.airlockerai.com';
+      window.DOWNLOADS = window.DOWNLOADS || {
+        // Apple Silicon build (M1/M2/M3/M4)
+        mac_arm64: window.DOWNLOAD_BASE_URL.replace(/\/+$/, '') + '/Airlok_Gateway_Setup.dmg',
+        // Intel build (fill when available)
+        mac_x64: ''
+      };
+    </script>
+  </head>
+  <body>
+    <nav class="nav">
+      <a href="index.html" class="nav-logo">AirLocker</a>
+      <div class="nav-cta">
+        <a class="btn-primary" href="index.html" data-zh>返回首页</a>
+        <a class="btn-primary hidden" href="index.html" data-en>Back</a>
+      </div>
+    </nav>
+
+    <header class="hero download-hero">
+      <div class="download-wrap">
+        <div class="download-header">
+          <div>
+            <div class="download-title" data-zh>下载 AirLocker</div>
+            <div class="download-title hidden" data-en>Download AirLocker</div>
+            <div class="download-sub" data-zh>选择你的 macOS 版本下载。Apple Silicon（M 系列）推荐；Intel 版本若未提供会显示为不可用。</div>
+            <div class="download-sub hidden" data-en>Select your macOS build. Apple Silicon is recommended; Intel will show unavailable if not published.</div>
+          </div>
+        </div>
+
+        <div class="download-grid">
+          <div class="dl-card">
+            <div class="dl-card-head">
+              <h3>macOS (Apple Silicon / M 系列)</h3>
+              <span class="dl-badge dl-badge-recommended" data-zh>推荐</span>
+              <span class="dl-badge dl-badge-recommended hidden" data-en>Recommended</span>
+            </div>
+            <p data-zh>适用于 M1/M2/M3/M4。</p>
+            <p class="hidden" data-en>For M1/M2/M3/M4.</p>
+            <div class="dl-actions">
+              <a class="btn-primary" id="dl-mac-arm64" href="#" rel="nofollow">Download</a>
+            </div>
+            <div class="dl-meta" data-zh>不知道你的芯片？在 macOS 里点「关于本机」查看“芯片”。</div>
+            <div class="dl-meta hidden" data-en>Not sure? Click “About This Mac” and check the chip.</div>
+          </div>
+
+          <div class="dl-card">
+            <div class="dl-card-head">
+              <h3>macOS (Intel x64)</h3>
+              <span class="dl-badge" data-zh>可选</span>
+              <span class="dl-badge hidden" data-en>Optional</span>
+            </div>
+            <p data-zh>适用于 Intel 芯片的 Mac。</p>
+            <p class="hidden" data-en>For Intel-based Macs.</p>
+            <div class="dl-actions">
+              <a class="btn-primary is-disabled" id="dl-mac-x64" href="#" rel="nofollow" aria-disabled="true">Download</a>
+            </div>
+            <div class="dl-meta" data-zh>如按钮灰掉：说明该版本尚未发布。</div>
+            <div class="dl-meta hidden" data-en>If disabled, the build isn’t published yet.</div>
+          </div>
+        </div>
+
+        <div class="dl-note" data-zh></div>
+        <div class="dl-note hidden" data-en></div>
+      </div>
+    </header>
+
+    <script src="js/main.js"></script>
+    <script>
+      (function () {
+        var arm64 = (window.DOWNLOADS && window.DOWNLOADS.mac_arm64) || '';
+        var x64 = (window.DOWNLOADS && window.DOWNLOADS.mac_x64) || '';
+
+        function wire(id, url) {
+          var a = document.getElementById(id);
+          if (!a) return;
+          if (!url) {
+            a.setAttribute('href', '#');
+            a.setAttribute('aria-disabled', 'true');
+            a.classList.add('is-disabled');
+            a.addEventListener('click', function (e) { e.preventDefault(); });
+            return;
+          }
+          a.setAttribute('href', url);
+          a.removeAttribute('aria-disabled');
+          a.classList.remove('is-disabled');
+        }
+
+        wire('dl-mac-arm64', arm64);
+        wire('dl-mac-x64', x64);
+      })();
+    </script>
+  </body>
+</html>
+

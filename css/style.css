@@ -123,6 +123,23 @@ body {
   box-shadow: 0 6px 18px rgba(0, 97, 255, 0.28);
 }
 
+.btn-primary.is-disabled,
+.btn-primary[aria-disabled='true'] {
+  opacity: 0.55;
+  background: #9fbaf0 !important;
+  box-shadow: none;
+  transform: none;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.btn-primary.is-disabled:hover,
+.btn-primary[aria-disabled='true']:hover {
+  background: #9fbaf0;
+  box-shadow: none;
+  transform: none;
+}
+
 .nav-cta .btn-primary {
   padding: 0.55rem 1.4rem;
   font-size: 0.96rem;
